@@ -251,3 +251,8 @@ renderer.setAnimationLoop(() => {
   oUs.forEach(ou => {ou.uTime.value = t;});
   renderer.render(scene, camera);
 });
+
+if (typeof koiMesh !== "undefined" && koiMesh.material && koiMesh.material.color) {
+  const koiColor = koiMesh.material.color.getStyle();
+  document.getElementById('description').style.color = koiColor;
+}
